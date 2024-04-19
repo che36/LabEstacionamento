@@ -1,16 +1,19 @@
 package com.cesar.entidades.veiculos;
 
+import com.cesar.entidades.TipoVeiculo;
+
 import java.time.LocalDateTime;
 
 public class Veiculo {
     //atributos
-    String marca;
-    String modelo;
-    String fatorEstacionamento;
-    LocalDateTime horaEntrada;
-    String placa;
-    LocalDateTime horaSaida;
-    double totalEstacionamento;
+    private String marca;
+    private String modelo;
+    private String fatorEstacionamento;
+    private LocalDateTime horaEntrada;
+    private String placa;
+    private LocalDateTime horaSaida;
+    private double totalEstacionamento;
+    private TipoVeiculo tipoVeiculo;
 
     public Veiculo() {
     }
@@ -69,5 +72,13 @@ public class Veiculo {
 
     public void setTotalEstacionamento(double totalEstacionamento) {
         this.totalEstacionamento = totalEstacionamento;
+    }
+
+    public TipoVeiculo getTipoVeiculo() {
+        return tipoVeiculo;
+    }
+
+    public void setTipoVeiculo(TipoVeiculo tipoVeiculo) {
+        this.tipoVeiculo = tipoVeiculo;
     }
 }
