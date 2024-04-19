@@ -1,5 +1,9 @@
 package com.cesar.entidades;
 
+import com.cesar.entidades.veiculos.Veiculo;
+
+import java.util.List;
+
 public class Estacionamento {
     //atributos
     double valorHora;
@@ -7,6 +11,7 @@ public class Estacionamento {
     double totalFaturamentoCarro;
     double totalFatutamentoMoto;
     double totalFaturamentoUtilitario;
+    private List<Veiculo> veiculos;
 
     public Estacionamento(double valorHora, double totalFaturamento, double totalFaturamentoCarro, double totalFatutamentoMoto, double totalFaturamentoUtilitario) {
         this.valorHora = valorHora;
@@ -14,6 +19,13 @@ public class Estacionamento {
         this.totalFaturamentoCarro = totalFaturamentoCarro;
         this.totalFatutamentoMoto = totalFatutamentoMoto;
         this.totalFaturamentoUtilitario = totalFaturamentoUtilitario;
+    }
+
+    public Estacionamento() {
+    }
+
+    public List<Veiculo> getVeiculos() {
+        return veiculos;
     }
 
     public double getValorHora() {
@@ -54,5 +66,8 @@ public class Estacionamento {
 
     public void setTotalFaturamentoUtilitario(double totalFaturamentoUtilitario) {
         this.totalFaturamentoUtilitario = totalFaturamentoUtilitario;
+    }
+
+    public void setVeiculos(List<Veiculo> veiculoList) {
     }
 }
